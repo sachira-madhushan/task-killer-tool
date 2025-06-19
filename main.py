@@ -1,8 +1,8 @@
 import customtkinter as ctk
 import subprocess
 import psutil
-from tkinter import messagebox  # <-- Add this line
-import tkinter as tk  # <-- Required for messagebox parent
+from tkinter import messagebox
+import tkinter as tk
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("dark-blue")
@@ -15,8 +15,8 @@ class NetstatApp(ctk.CTk):
         self.title("Netstat Viewer & Process Killer")
         self.geometry("950x600")
 
-        self.tk_root = tk.Tk()  # Hidden root window for messagebox
-        self.tk_root.withdraw()  # Don't show the root window
+        self.tk_root = tk.Tk()
+        self.tk_root.withdraw()
 
         self.search_entry = ctk.CTkEntry(self, placeholder_text="Search by port, IP, or PID")
         self.search_entry.pack(padx=10, pady=(10, 5), fill="x")
